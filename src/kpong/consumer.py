@@ -13,8 +13,6 @@ consumer = KafkaConsumer(
 
 
 def consume_ping_pong():
-    consumer.subscribe(topics=['pingpong'])
-
     print("reading...")
     for msg in consumer:
         print(msg.value)
